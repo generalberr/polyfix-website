@@ -1,0 +1,125 @@
+.footer {
+  background: var(--black);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 64px 48px 32px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--black);
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+}
+
+.brand p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 280px;
+}
+
+.col {}
+
+.heading {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.links a:hover { color: #FFFFFF; }
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.contactItem a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.contactItem a:hover { color: #FFFFFF; }
+
+.contactLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.tagline {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(200, 150, 62, 0.4);
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 48px 24px 28px; }
+  .top { grid-template-columns: 1fr; gap: 36px; }
+}
