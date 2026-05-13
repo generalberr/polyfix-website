@@ -55,12 +55,13 @@ export default function ContactPage() {
               {[
                 { label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
                 { label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
+                { label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
                 { label: 'Address', value: 'Building 4559, Al Rafiah St.\nAl Misfat District\nRiyadh 14528, KSA', href: undefined },
               ].map(d => (
                 <div key={d.label} className={styles.detail}>
                   <span className={styles.detailLabel}>{d.label}</span>
                   {d.href
-                    ? <a href={d.href} className={styles.detailValue}>{d.value}</a>
+                    ? <a href={d.href} className={styles.detailValue} target={d.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">{d.value}</a>
                     : <span className={styles.detailValue} style={{ whiteSpace: 'pre-line' }}>{d.value}</span>
                   }
                 </div>
@@ -161,6 +162,7 @@ export default function ContactPage() {
             {[
               { icon: '📍', label: 'Address', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
               { icon: '📞', label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
+              { icon: '💬', label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
               { icon: '✉️', label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
               { icon: '🗺️', label: 'Directions', value: 'Open in Google Maps →', href: 'https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6' },
             ].map(l => (
