@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolyFix — Industrial Machinery & Professional Polyester Putty</title>
+  <meta name="description" content="A leading manufacturer of industrial and technological machinery — alongside our professional polyester putty trusted by bodyshops, fabricators, woodworkers, and builders worldwide." />
+  <meta name="keywords" content="polyfix,metal putty,polyester putty,steel repair,body filler,automotive repair,Saudi Arabia,Riyadh" />
+  <meta property="og:title" content="PolyFix — Professional Metal Putty" />
+  <meta property="og:description" content="Industrial-strength polyester putty for steel repair." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #1A1A1A;
+      --surface: #F4F2EE;
+      --surface2: #ECEAE5;
+      --border: rgba(0,0,0,0.1);
+      --white: #FFFFFF;
+      --muted: rgba(26,26,26,0.5);
+      --accent: #C8963E;
+      --accent2: #A87730;
+      --red: #C0392B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: var(--black);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--black);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .lang-toggle {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      transition: all 0.2s;
+    }
+
+    .lang-toggle:hover {
+      color: var(--black);
+      border-color: rgba(0,0,0,0.3);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(26,26,26,0.3);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--black);
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:hover { color: var(--black); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=1800&q=80') center/cover no-repeat;
+      filter: brightness(0.25) saturate(0.6);
+      z-index: 0;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0.1) 100%);
+      z-index: 1;
+    }
+
+    .hero-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 9vw, 130px);
+      line-height: 0.92;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      margin-top: 28px;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      margin-top: 36px;
+      position: relative;
+      z-index: 2;
+      flex-wrap: wrap;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item {
+      padding: 40px 48px;
+      border-right: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: width 0.5s ease;
+    }
+
+    .stat-item:hover::after { width: 100%; }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 56px;
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+
+    .stat-num span { color: var(--accent); }
+
+    .stat-label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 100px 48px; }
+
+    .section-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-tag::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-top: 24px;
+    }
+
+    .about-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pillar {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .pillar:first-child { border-top: 1px solid var(--border); }
+
+    .pillar-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      min-width: 36px;
+      padding-top: 3px;
+    }
+
+    .pillar-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .pillar-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── CAPABILITIES ── */
+    .capabilities { background: var(--white); }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 56px;
+      border: 1px solid var(--border);
+    }
+
+    .cap-card {
+      background: var(--white);
+      overflow: hidden;
+      position: relative;
+      cursor: default;
+    }
+
+    .cap-card-img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      filter: brightness(0.6) saturate(0.5);
+      transition: filter 0.4s, transform 0.5s;
+    }
+
+    .cap-card:hover .cap-card-img {
+      filter: brightness(0.4) saturate(0.3);
+      transform: scale(1.04);
+    }
+
+    .cap-card-body {
+      padding: 24px;
+    }
+
+    .cap-card-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cap-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cap-card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── DISTRIBUTION ── */
+    .distribution {
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .distribution h2 { margin-top: 16px; }
+
+    .countries-scroll {
+      margin-top: 52px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .countries-scroll::before,
+    .countries-scroll::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .countries-scroll::before {
+      left: 0;
+      background: linear-gradient(to right, var(--surface), transparent);
+    }
+
+    .countries-scroll::after {
+      right: 0;
+      background: linear-gradient(to left, var(--surface), transparent);
+    }
+
+    .countries-track {
+      display: flex;
+      gap: 0;
+      animation: scroll-countries 20s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes scroll-countries {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .country-item {
+      padding: 18px 48px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 4px;
+      color: var(--muted);
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    /* ── FEATURES ── */
+    .features { background: var(--white); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 56px;
+      border: 1px solid var(--border);
+    }
+
+    .feature-card {
+      background: var(--surface);
+      padding: 36px;
+      transition: background 0.3s;
+    }
+
+    .feature-card:hover { background: var(--surface2); }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(200,150,62,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .feature-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── WHY POLYFIX ── */
+    .why { background: var(--surface); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-top: 56px;
+    }
+
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .why-item:first-child { border-top: 1px solid var(--border); }
+
+    .why-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: rgba(200,150,62,0.15);
+      line-height: 1;
+      min-width: 50px;
+    }
+
+    .why-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── SPECS ── */
+    .specs-table {
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .spec-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .spec-row:last-child { border-bottom: none; }
+
+    .spec-key {
+      padding: 16px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(0,0,0,0.03);
+      border-right: 1px solid var(--border);
+    }
+
+    .spec-val {
+      padding: 16px 24px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .specs-cta {
+      margin-top: 32px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--white); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 56px;
+      border: 1px solid var(--border);
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      padding: 36px;
+    }
+
+    .testimonial-quote {
+      font-size: 24px;
+      color: var(--accent);
+      font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(26,26,26,0.7);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .testimonial-author {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* ── INDUSTRIES ── */
+    .industries { background: var(--surface); }
+
+    .industries-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .industry-tag {
+      padding: 10px 20px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: all 0.2s;
+      cursor: default;
+    }
+
+    .industry-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+
+    .faq-list {
+      margin-top: 56px;
+      max-width: 760px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--black);
+      text-align: left;
+      padding: 24px 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover { color: var(--accent); }
+
+    .faq-question .faq-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 1px;
+      min-width: 28px;
+    }
+
+    .faq-question .faq-icon {
+      font-size: 20px;
+      color: var(--accent);
+      transition: transform 0.3s;
+      line-height: 1;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+      padding-bottom: 24px;
+      padding-left: 40px;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: var(--accent);
+      padding: 80px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .cta-banner h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 4vw, 60px);
+      color: var(--black);
+      letter-spacing: 1px;
+    }
+
+    .cta-banner p {
+      color: rgba(8,8,8,0.65);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: #FFFFFF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      transition: background 0.2s;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .btn-dark:hover { background: #333333; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 64px 48px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 16px;
+    }
+
+    .footer-contact-item a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-item a:hover { color: #FFFFFF; }
+
+    .footer-contact-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.15);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(200,150,62,0.4);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .cap-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid .testimonial-card:last-child { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-right .lang-toggle { display: none; }
+      .hamburger { display: flex; }
+
+      .hero { padding: 0 24px 60px; }
+      section { padding: 64px 24px; }
+
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { padding: 28px 24px; }
+      .stat-item:nth-child(2) { border-right: none; }
+
+      .about { grid-template-columns: 1fr; gap: 40px; }
+      .cap-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .cta-banner { padding: 48px 24px; }
+      .cta-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-mark">P</div>
+      <span class="nav-logo-text">POLYFIX</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="ar/index.html" class="lang-toggle">AR</a>
+      <a href="contact.html" class="btn-primary">Get a Quote</a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="product.html" onclick="closeMenu()">Product</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" onclick="closeMenu()" style="color: var(--accent);">Get a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home" style="padding-top:0;">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-tag">Industrial Machinery & Polyester Putty</div>
+    <h1>Industrial Engineering Powered by <span>POLYFIX.</span></h1>
+    <p class="hero-sub">A leading and experienced producer of industrial and technological machinery — and a trusted manufacturer of professional polyester putty for automotive, construction, wood, and high-temperature applications.</p>
+    <div class="hero-ctas">
+      <a href="#product" class="btn-primary">View Product</a>
+      <a href="#contact" class="btn-outline">Request Wholesale</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span id="stat1">0</span>+</div>
+      <div class="stat-label">Years of Manufacturing</div>
+    </div>
+    <div class="stat-item fade-up" style="transition-delay:0.1s">
+      <div class="stat-num"><span id="stat2">0</span></div>
+      <div class="stat-label">Production Lines</div>
+    </div>
+    <div class="stat-item fade-up" style="transition-delay:0.2s">
+      <div class="stat-num"><span id="stat3">0</span></div>
+      <div class="stat-label">Industries Served</div>
+    </div>
+    <div class="stat-item fade-up" style="transition-delay:0.3s">
+      <div class="stat-num"><span id="stat4">0</span>%</div>
+      <div class="stat-label">Professional Grade</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text fade-up">
+      <div class="section-tag">Who We Are</div>
+      <h2>Built at industrial scale.</h2>
+      <p>PolyFix is a leading and experienced producer of industrial and technological machinery — and a trusted manufacturer of professional polyester putty.</p>
+      <p style="margin-top:16px;">From custom-engineered mixing lines and packaging systems to high-performance repair products, we deliver both the equipment and the materials that keep production moving. Decades of combined manufacturing know-how, in one partner.</p>
+    </div>
+    <div class="about-pillars fade-up" style="transition-delay:0.15s">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div>
+          <div class="pillar-title">Machinery</div>
+          <div class="pillar-desc">Industrial & technological systems engineered to spec</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div>
+          <div class="pillar-title">Materials</div>
+          <div class="pillar-desc">Professional polyester putty for multi-surface repair</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div>
+          <div class="pillar-title">Custom</div>
+          <div class="pillar-desc">Tailored formulations & line configurations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="capabilities" id="product">
+    <div class="section-tag fade-up">What We Build</div>
+    <h2 class="fade-up">Engineering across the line.</h2>
+    <p style="color:var(--muted);font-size:15px;margin-top:12px;max-width:480px;" class="fade-up">Four core capabilities, one integrated production partner.</p>
+    <div class="cap-grid">
+      <div class="cap-card fade-up">
+        <img class="cap-card-img" src="https://images.unsplash.com/photo-1565785755400-d8f4e5fe3a4a?w=600&q=70" alt="Industrial Machinery" />
+        <div class="cap-card-body">
+          <div class="cap-card-num">01 — CAPABILITY</div>
+          <div class="cap-card-title">Industrial Machinery</div>
+          <div class="cap-card-desc">Heavy-duty production equipment engineered for the demands of modern industrial operations.</div>
+        </div>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.1s">
+        <img class="cap-card-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70" alt="Technological Equipment" />
+        <div class="cap-card-body">
+          <div class="cap-card-num">02 — CAPABILITY</div>
+          <div class="cap-card-title">Technological Equipment</div>
+          <div class="cap-card-desc">Precision-engineered automated systems built for repeatable, high-throughput manufacturing.</div>
+        </div>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.2s">
+        <img class="cap-card-img" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70" alt="Putty Mixing Lines" />
+        <div class="cap-card-body">
+          <div class="cap-card-num">03 — CAPABILITY</div>
+          <div class="cap-card-title">Putty Mixing Lines</div>
+          <div class="cap-card-desc">Custom mixing systems engineered for batch consistency and uncompromised material quality.</div>
+        </div>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.3s">
+        <img class="cap-card-img" src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70" alt="Packaging Lines" />
+        <div class="cap-card-body">
+          <div class="cap-card-num">04 — CAPABILITY</div>
+          <div class="cap-card-title">Packaging Lines</div>
+          <div class="cap-card-desc">Automated filling and packaging configured for industrial-grade output and reliability.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTRIBUTION -->
+  <section class="distribution">
+    <div class="section-tag" style="justify-content:center;">Stocked & Trusted Across</div>
+    <h2>Our Reach</h2>
+    <div class="countries-scroll">
+      <div class="countries-track">
+        <div class="country-item">Saudi Arabia</div>
+        <div class="country-item">UAE</div>
+        <div class="country-item">Kuwait</div>
+        <div class="country-item">Qatar</div>
+        <div class="country-item">Bahrain</div>
+        <div class="country-item">Oman</div>
+        <div class="country-item">Lebanon</div>
+        <div class="country-item">Jordan</div>
+        <div class="country-item">Saudi Arabia</div>
+        <div class="country-item">UAE</div>
+        <div class="country-item">Kuwait</div>
+        <div class="country-item">Qatar</div>
+        <div class="country-item">Bahrain</div>
+        <div class="country-item">Oman</div>
+        <div class="country-item">Lebanon</div>
+        <div class="country-item">Jordan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-tag fade-up">Core Advantages</div>
+    <h2 class="fade-up">Built for Professionals</h2>
+    <div class="features-grid" style="margin-top:56px;">
+      <div class="feature-card fade-up">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Extreme Adhesion</div>
+        <div class="feature-desc">Bonds powerfully to steel. No primer required for standard applications.</div>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.1s">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Easy Application</div>
+        <div class="feature-desc">Smooth spreadable consistency. High coverage ratio — each kg goes further.</div>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.2s">
+        <div class="feature-icon">✦</div>
+        <div class="feature-title">Perfect Sanding</div>
+        <div class="feature-desc">Sands cleanly without clogging paper. Flawless surface for primer and topcoat.</div>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.0s">
+        <div class="feature-icon">◎</div>
+        <div class="feature-title">Neutral Base</div>
+        <div class="feature-desc">No pigmentation — accepts any topcoat colour with zero bleed-through.</div>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.1s">
+        <div class="feature-icon">🏭</div>
+        <div class="feature-title">Pro-Grade Formula</div>
+        <div class="feature-desc">Engineered for production bodyshops, metal fabricators, and construction pros.</div>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.2s">
+        <div class="feature-icon">⏱</div>
+        <div class="feature-title">Fast Cure</div>
+        <div class="feature-desc">Controlled working time with fast hardening — keeps your workflow moving.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY + SPECS -->
+  <section class="why">
+    <div class="section-tag fade-up">Why PolyFix</div>
+    <h2 class="fade-up">Engineered to outperform</h2>
+    <div class="why-grid">
+      <div class="why-list">
+        <div class="why-item fade-up">
+          <div class="why-num">01</div>
+          <div>
+            <div class="why-title">Consistent Quality</div>
+            <div class="why-desc">Every batch meets strict manufacturing standards. Same performance every time.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.1s">
+          <div class="why-num">02</div>
+          <div>
+            <div class="why-title">High Coverage Ratio</div>
+            <div class="why-desc">Lower material cost per repair. Spreads further than comparable products.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.2s">
+          <div class="why-num">03</div>
+          <div>
+            <div class="why-title">Wholesale Available</div>
+            <div class="why-desc">Volume pricing for distributors and workshops. Contact us for trade accounts.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.3s">
+          <div class="why-num">04</div>
+          <div>
+            <div class="why-title">Technical Support</div>
+            <div class="why-desc">Our team advises on mix ratios, surface prep, and technique.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.15s">
+        <div class="section-tag" style="margin-bottom:24px;">Quick Specs</div>
+        <div class="specs-table">
+          <div class="spec-row"><div class="spec-key">Type</div><div class="spec-val">Polyester Metal Putty</div></div>
+          <div class="spec-row"><div class="spec-key">Base</div><div class="spec-val">Polyester Resin</div></div>
+          <div class="spec-row"><div class="spec-key">Hardener</div><div class="spec-val">Included (MEKP)</div></div>
+          <div class="spec-row"><div class="spec-key">Substrate</div><div class="spec-val">Steel / Metal</div></div>
+          <div class="spec-row"><div class="spec-key">Colour</div><div class="spec-val">Neutral / Unpigmented</div></div>
+          <div class="spec-row"><div class="spec-key">Sizes</div><div class="spec-val">1 kg / 2 kg / 3 kg</div></div>
+          <div class="spec-row"><div class="spec-key">Finish</div><div class="spec-val">Sandable / Paintable</div></div>
+        </div>
+        <div class="specs-cta">
+          <a href="#product" class="btn-outline">Full Technical Sheet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-tag fade-up">What Professionals Say</div>
+    <h2 class="fade-up">Trusted by Experts</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">We switched to PolyFix across all our bays. The adhesion is in a different league — and it sands out beautifully every time.</p>
+        <div class="testimonial-author">Khalid R.</div>
+        <div class="testimonial-role">Owner, Premium Auto Bodyshop</div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.1s">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">On construction sites you need a product that works first time. PolyFix has never let us down — excellent coverage and reliable cure.</p>
+        <div class="testimonial-author">Yusuf M.</div>
+        <div class="testimonial-role">Site Manager, Steel Structures Ltd.</div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.2s">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">As a fabricator, surface finish is everything. PolyFix gives us the neutral base we need — no colour bleed, no surprises under paint.</p>
+        <div class="testimonial-author">Amira S.</div>
+        <div class="testimonial-role">Head Fabricator, MetalWorks Pro</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries">
+    <div class="section-tag fade-up">Who Uses PolyFix</div>
+    <h2 class="fade-up">Industries We Serve</h2>
+    <div class="industries-grid fade-up">
+      <div class="industry-tag">Auto Bodyshops</div>
+      <div class="industry-tag">Construction</div>
+      <div class="industry-tag">Metal Fabrication</div>
+      <div class="industry-tag">DIY & Repair</div>
+      <div class="industry-tag">Heavy Vehicles</div>
+      <div class="industry-tag">Industrial MRO</div>
+      <div class="industry-tag">Woodworking</div>
+      <div class="industry-tag">Marine</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="section-tag fade-up">Common Questions</div>
+    <h2 class="fade-up">Frequently Asked</h2>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">01</span> How much hardener should I add?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Use 2–3% hardener by weight at 20°C. Reduce to 1.5–2% in hot conditions and increase to 3–4% in cold conditions to maintain working time.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">02</span> Do I need primer before applying PolyFix?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>For standard applications on bare steel, no primer is required. For painted or treated surfaces, light sanding to bare metal is recommended for optimal adhesion.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">03</span> What's the maximum thickness per layer?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We recommend a maximum of 6–8mm per layer. For deeper repairs, apply in multiple layers, allowing each to partially cure before adding the next.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">04</span> Can I get wholesale or trade pricing?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes — we offer volume pricing for distributors, bodyshop chains, and trade accounts. Contact us directly at Info@polyfixglobal.com or via the contact page.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">05</span> What sizes are available?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>PolyFix is available in 1 kg, 2 kg, and 3 kg tins. Each tin includes the MEKP hardener. Larger bulk formats available for wholesale orders.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span><span class="faq-num">06</span> How long is the shelf life?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Shelf life is 12 months from manufacture date when stored in a cool, dry place away from direct sunlight. Keep containers sealed when not in use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner" id="contact">
+    <div>
+      <h2>Ready to order or partner with us?</h2>
+      <p>Get in touch for wholesale pricing, technical support, or machinery inquiries.</p>
+    </div>
+    <a href="mailto:Info@polyfixglobal.com" class="btn-dark">Get a Quote →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom:0;color:#FFFFFF;">
+          <div class="nav-logo-mark">P</div>
+          <span class="nav-logo-text" style="color:#FFFFFF;">POLYFIX</span>
+        </a>
+        <p>Manufacturer of industrial machinery and professional polyester putty. Building 4559, Al Rafiah St., Al Misfat District, Riyadh 14528, KSA.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <a href="mailto:Info@polyfixglobal.com">Info@polyfixglobal.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Phone</span>
+          <a href="tel:+966534944752">+966 53 494 4752</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Address</span>
+          <a href="https://maps.google.com/?q=4559+Al+Rafiah+Street,+Al+Misfat+District,+Riyadh+14528,+Saudi+Arabia" target="_blank" rel="noopener">Get Directions →</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 PolyFix Company. All rights reserved.</span>
+      <span class="footer-tagline">Professional Metal Putty</span>
+    </div>
+  </footer>
+
+  <script>
+    // ── MOBILE MENU ──
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // ── FAQ ACCORDION ──
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ── SCROLL ANIMATIONS ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ── COUNTER ANIMATION ──
+    const counters = [
+      { id: 'stat1', target: 15 },
+      { id: 'stat2', target: 8 },
+      { id: 'stat3', target: 6 },
+      { id: 'stat4', target: 100 },
+    ];
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          counters.forEach(({ id, target }) => {
+            const el = document.getElementById(id);
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+              current = Math.min(current + step, target);
+              el.textContent = current;
+              if (current >= target) clearInterval(timer);
+            }, 30);
+          });
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statsObserver.observe(document.querySelector('.stats'));
+
+    // ── NAV ACTIVE STATE ──
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 40) {
+        nav.style.background = 'rgba(255,255,255,0.98)';
+      } else {
+        nav.style.background = 'rgba(255,255,255,0.92)';
+      }
+    });
+  </script>
+</body>
+</html>
