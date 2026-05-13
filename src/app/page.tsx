@@ -122,20 +122,32 @@ export default function Home() {
         </div>
         <div className={styles.capGrid}>
           {[
-            { num: '01', title: 'Industrial Machinery', desc: 'Heavy-duty production equipment engineered for the demands of modern industrial operations.', img: '/hero.jpg' },
-            { num: '02', title: 'Technological Equipment', desc: 'Precision-engineered automated systems built for repeatable, high-throughput manufacturing.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70' },
-            { num: '03', title: 'Putty Mixing Lines', desc: 'Custom mixing systems engineered for batch consistency and uncompromised material quality.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70' },
-            { num: '04', title: 'Packaging Lines', desc: 'Automated filling and packaging configured for industrial-grade output and reliability.', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70' },
-          ].map(c => (
-            <div key={c.num} className={styles.capCard}>
-              <img src={c.img} alt={c.title} className={styles.capImg} />
-              <div className={styles.capBody}>
-                <div className={styles.capNum}>0{c.num.slice(1)} — CAPABILITY</div>
-                <div className={styles.capTitle}>{c.title}</div>
-                <div className={styles.capDesc}>{c.desc}</div>
+            { num: '01', title: 'Industrial Machinery', desc: 'We design and manufacture heavy-duty commercial machines built for serious production environments — custom engineered to your exact specifications and built to perform at scale.', img: '/hero.jpg', href: '/machinery' },
+            { num: '02', title: 'Technological Equipment', desc: 'Precision-engineered automated systems built for repeatable, high-throughput manufacturing.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70', href: null },
+            { num: '03', title: 'Putty Mixing Lines', desc: 'Custom mixing systems engineered for batch consistency and uncompromised material quality.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70', href: null },
+            { num: '04', title: 'Packaging Lines', desc: 'Automated filling and packaging configured for industrial-grade output and reliability.', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70', href: null },
+          ].map(c => {
+            const cardContent = (
+              <>
+                <img src={c.img} alt={c.title} className={styles.capImg} />
+                <div className={styles.capBody}>
+                  <div className={styles.capNum}>{c.num} — CAPABILITY</div>
+                  <div className={styles.capTitle}>{c.title}</div>
+                  <div className={styles.capDesc}>{c.desc}</div>
+                  {c.href && <div className={styles.capCta}>Learn More →</div>}
+                </div>
+              </>
+            )
+            return c.href ? (
+              <Link key={c.num} href={c.href} className={`${styles.capCard} ${styles.capCardLink}`}>
+                {cardContent}
+              </Link>
+            ) : (
+              <div key={c.num} className={styles.capCard}>
+                {cardContent}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 

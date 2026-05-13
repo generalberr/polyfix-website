@@ -12,7 +12,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: url('/hero.jpg') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=1800&q=80') center/cover no-repeat;
   filter: brightness(0.25) saturate(0.6);
   z-index: 0;
 }
@@ -186,6 +186,9 @@
 }
 
 .capCard { background: var(--white); overflow: hidden; }
+.capCardLink { background: var(--white); overflow: hidden; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.capCardLink:hover .capImg { filter: brightness(0.4) saturate(0.3); transform: scale(1.04); }
+.capCta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-top: 12px; transition: gap 0.2s; }
 .capImg { width: 100%; aspect-ratio: 3/2; object-fit: cover; filter: brightness(0.6) saturate(0.5); transition: filter 0.4s, transform 0.5s; display: block; }
 .capCard:hover .capImg { filter: brightness(0.4) saturate(0.3); transform: scale(1.04); }
 .capBody { padding: 24px; }
