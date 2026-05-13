@@ -162,7 +162,7 @@ export default function ContactPage() {
               { icon: '📍', label: 'Address', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
               { icon: '📞', label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
               { icon: '✉️', label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
-              { icon: '🗺️', label: 'Directions', value: 'Open in Google Maps →', href: 'https://maps.google.com/?q=4559+Al+Rafiah+Street,+Al+Misfat+District,+Riyadh+14528,+Saudi+Arabia' },
+              { icon: '🗺️', label: 'Directions', value: 'Open in Google Maps →', href: 'https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6' },
             ].map(l => (
               <div key={l.label} className={styles.locationItem}>
                 <div className={styles.locationIcon}>{l.icon}</div>
