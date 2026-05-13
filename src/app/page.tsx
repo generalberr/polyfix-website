@@ -122,10 +122,10 @@ export default function Home() {
         </div>
         <div className={styles.capGrid}>
           {[
-            { num: '01', title: 'Industrial Machinery', desc: 'Heavy-duty production equipment engineered for the demands of modern industrial operations.', img: 'https://images.unsplash.com/photo-1565785755400-d8f4e5fe3a4a?w=600&q=70' },
-            { num: '02', title: 'Technological Equipment', desc: 'Precision-engineered automated systems built for repeatable, high-throughput manufacturing.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70' },
-            { num: '03', title: 'Putty Mixing Lines', desc: 'Custom mixing systems engineered for batch consistency and uncompromised material quality.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70' },
-            { num: '04', title: 'Packaging Lines', desc: 'Automated filling and packaging configured for industrial-grade output and reliability.', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70' },
+            { num: '01', title: 'Industrial Machinery', desc: 'Heavy-duty production equipment engineered for the demands of modern industrial operations.', img: '/hero.jpg' },
+            { num: '02', title: 'Technological Equipment', desc: 'Precision-engineered automated systems built for repeatable, high-throughput manufacturing.', img: '/hero.jpg' },
+            { num: '03', title: 'Putty Mixing Lines', desc: 'Custom mixing systems engineered for batch consistency and uncompromised material quality.', img: '/hero.jpg' },
+            { num: '04', title: 'Packaging Lines', desc: 'Automated filling and packaging configured for industrial-grade output and reliability.', img: '/hero.jpg' },
           ].map(c => (
             <div key={c.num} className={styles.capCard}>
               <img src={c.img} alt={c.title} className={styles.capImg} />
