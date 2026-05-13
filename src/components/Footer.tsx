@@ -40,6 +40,10 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
             <a href="tel:+966534944752">+966 53 494 4752</a>
           </div>
           <div className={styles.contactItem}>
+            <span className={styles.contactLabel}>WhatsApp</span>
+            <a href="https://wa.me/966534944752" target="_blank" rel="noopener noreferrer">+966 53 494 4752</a>
+          </div>
+          <div className={styles.contactItem}>
             <span className={styles.contactLabel}>{isAr ? 'العنوان' : 'Address'}</span>
             <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" target="_blank" rel="noopener noreferrer">
               {isAr ? 'احصل على الاتجاهات ←' : 'Get Directions →'}
