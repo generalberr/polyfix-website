@@ -41,7 +41,7 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
           </div>
           <div className={styles.contactItem}>
             <span className={styles.contactLabel}>{isAr ? 'العنوان' : 'Address'}</span>
-            <a href="https://maps.google.com/?q=4559+Al+Rafiah+Street,+Al+Misfat+District,+Riyadh+14528,+Saudi+Arabia" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" target="_blank" rel="noopener noreferrer">
               {isAr ? 'احصل على الاتجاهات ←' : 'Get Directions →'}
             </a>
           </div>
