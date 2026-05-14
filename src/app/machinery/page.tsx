@@ -137,16 +137,16 @@ export default function MachineryPage() {
         <p className={styles.examplesNote}>These are examples of machine types we have engineered. Every unit is custom — yours will be designed specifically for your needs.</p>
         <div className={styles.examplesGrid}>
           {[
-            { title: 'Large-Scale Mixing Machines', desc: 'High-capacity industrial mixers with heavy-duty motors, hydraulic press systems, vacuum chambers, and full temperature & speed control boards.' },
-            { title: 'Automated Filling Machines', desc: 'Precision filling systems for tubes, containers, and packaging — programmable fill volumes, high-speed operation, and minimal waste.' },
-            { title: 'Conveyor & Transfer Systems', desc: 'Custom conveyor lines designed for your production flow — single or multi-stage, with integrated controls and safety systems.' },
-            { title: 'Hydraulic Press Machines', desc: 'Heavy-duty hydraulic presses for forming, compressing, and shaping materials — built to your required tonnage and cycle specifications.' },
-            { title: 'Production Line Systems', desc: 'End-to-end production line design and fabrication — from raw material input to finished product output, fully integrated and automated.' },
-            { title: 'Any Custom Machine', desc: 'If you can describe it, we can build it. Our engineers thrive on complex, one-of-a-kind challenges. Get in touch and let\'s talk.' },
+            { title: 'Large-Scale Mixing Machines', desc: 'High-capacity industrial mixers with heavy-duty motors, hydraulic press systems, vacuum chambers, and full temperature & speed control boards.', img: '/machine-mixing.png' },
+            { title: 'Automated Filling Machines', desc: 'Precision filling systems for tubes, containers, and packaging — programmable fill volumes, high-speed operation, and minimal waste.', img: '/machine-filling.png' },
+            { title: 'Conveyor & Transfer Systems', desc: 'Custom conveyor lines designed for your production flow — single or multi-stage, with integrated controls and safety systems.', img: '/machine-conveyor.png' },
+            { title: 'Hydraulic Press Machines', desc: 'Heavy-duty hydraulic presses for forming, compressing, and shaping materials — built to your required tonnage and cycle specifications.', img: '/machine-hydraulic.png' },
+            { title: 'Production Line Systems', desc: 'End-to-end production line design and fabrication — from raw material input to finished product output, fully integrated and automated.', img: '/machine-production.png' },
+            { title: 'Any Custom Machine', desc: 'If you can describe it, we can build it. Our engineers thrive on complex, one-of-a-kind challenges. Get in touch and let\'s talk.', img: '/machine-custom.png' },
           ].map(e => (
             <div key={e.title} className={styles.exampleCard}>
               <div className={styles.exampleImg}>
-                <img src="/hero.jpg" alt={e.title} />
+                <img src={e.img} alt={e.title} />
               </div>
               <div className={styles.exampleBody}>
                 <div className={styles.exampleTitle}>{e.title}</div>
