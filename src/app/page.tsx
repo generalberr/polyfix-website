@@ -123,7 +123,7 @@ export default function Home() {
         <div className={styles.capGrid}>
           {[
             { num: '01', title: 'Industrial Machinery', desc: 'We design and manufacture heavy-duty commercial machines built for serious production environments — custom engineered to your exact specifications and built to perform at scale.', img: '/hero.jpg', href: '/machinery' },
-            { num: '02', title: 'Technological Equipment', desc: 'Precision-engineered automated systems built for repeatable, high-throughput manufacturing.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70', href: null },
+            { num: '02', title: 'Polyester Putty for Steel', desc: 'Our flagship product — a professional-grade polyester putty trusted by bodyshops, fabricators, and builders across the Middle East. Made in Saudi Arabia.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70', href: '/putty' },
             { num: '03', title: 'Putty Mixing Lines', desc: 'Custom mixing systems engineered for batch consistency and uncompromised material quality.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70', href: null },
             { num: '04', title: 'Packaging Lines', desc: 'Automated filling and packaging configured for industrial-grade output and reliability.', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70', href: null },
           ].map(c => {
