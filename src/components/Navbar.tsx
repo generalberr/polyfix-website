@@ -13,7 +13,7 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
-export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
+export default function Navbar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -24,25 +24,23 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const isAr = lang === 'ar'
-  const prefix = isAr ? '/ar' : ''
-
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-        <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <Image src="/logo.png" alt="PolyFix Logo" width={180} height={90} style={{ objectFit: 'contain', marginLeft: '-20px', marginRight: '-10px' }} />
           <span className={styles.logoText}>POLYFIX</span>
         </Link>
 
         <ul className={styles.links}>
           {links.map(({ href, label }) => {
-            const fullHref = prefix + href
-            const active = pathname === fullHref || (href === '/' && pathname === prefix)
+            const active = href === '/#services'
+              ? pathname === '/'
+              : pathname === href
             return (
               <li key={href}>
-                <Link href={fullHref} className={`${styles.link} ${active ? styles.active : ''}`}>
-                  {isAr ? arLabels[label] : label}
+                <Link href={href} className={`${styles.link} ${active ? styles.active : ''}`}>
+                  {label}
                 </Link>
               </li>
             )
@@ -50,12 +48,7 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
         </ul>
 
         <div className={styles.right}>
-          <Link href={isAr ? '/' : '/ar'} className={styles.langToggle}>
-            {isAr ? 'EN' : 'AR'}
-          </Link>
-          <Link href={`${prefix}/contact`} className={styles.btnPrimary}>
-            {isAr ? 'احصل على عرض سعر' : 'Get a Quote'}
-          </Link>
+          <Link href="/contact" className={styles.btnPrimary}>Get a Quote</Link>
           <button
             className={styles.hamburger}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -70,21 +63,14 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
         {links.map(({ href, label }) => (
-          <Link key={href} href={prefix + href} onClick={() => setMenuOpen(false)} className={styles.mobileLink}>
-            {isAr ? arLabels[label] : label}
+          <Link key={href} href={href} onClick={() => setMenuOpen(false)} className={styles.mobileLink}>
+            {label}
           </Link>
         ))}
-        <Link href={`${prefix}/contact`} onClick={() => setMenuOpen(false)} className={`${styles.mobileLink} ${styles.mobileCta}`}>
-          {isAr ? 'احصل على عرض سعر' : 'Get a Quote'}
+        <Link href="/contact" onClick={() => setMenuOpen(false)} className={`${styles.mobileLink} ${styles.mobileCta}`}>
+          Get a Quote
         </Link>
       </div>
     </>
   )
-}
-
-const arLabels: Record<string, string> = {
-  Home: 'الرئيسية',
-  Services: 'خدماتنا',
-  About: 'من نحن',
-  Contact: 'اتصل بنا',
 }
