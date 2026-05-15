@@ -97,12 +97,6 @@ export default function PuttyPage() {
               <span className={styles.badge}>Oven Compatible</span>
             </div>
           </div>
-          <div className={styles.heroRight}>
-            {/* PRODUCT PHOTO PLACEHOLDER — replace /product.jpg with your real photo */}
-            <div className={styles.productImgWrap}>
-              <img src="/putty-hero.png" alt="PolyFix Polyester Putty" className={styles.productImg} />
-            </div>
-          </div>
         </div>
       </section>
 
