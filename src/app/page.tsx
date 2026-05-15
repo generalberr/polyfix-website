@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* CAPABILITIES */}
-      <section className={styles.capabilities}>
+      <section className={styles.capabilities} id="services">
         <div ref={cap.ref} className={`${styles.fadeUp} ${cap.visible ? styles.visible : ''}`}>
           <div className={styles.sectionTag}>What We Build</div>
           <h2>Engineering across the line.</h2>
