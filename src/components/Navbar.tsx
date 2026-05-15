@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
@@ -30,7 +31,7 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
-          <div className={styles.logoMark}>P</div>
+          <Image src="/logo.png" alt="PolyFix Logo" width={48} height={28} style={{ objectFit: 'contain' }} />
           <span className={styles.logoText}>POLYFIX</span>
         </Link>
 
