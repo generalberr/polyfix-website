@@ -12,8 +12,8 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=1800&q=80') center/cover no-repeat;
-  filter: brightness(0.25) saturate(0.6);
+  background: url('/hero.jpg') center/cover no-repeat;
+  filter: brightness(0.45) saturate(0.7);
   z-index: 0;
 }
 
