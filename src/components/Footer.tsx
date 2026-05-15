@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Footer.module.css'
 
 export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
@@ -10,7 +11,7 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
       <div className={styles.top}>
         <div className={styles.brand}>
           <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
-            <div className={styles.logoMark}>P</div>
+            <Image src="/logo.png" alt="PolyFix Logo" width={80} height={40} style={{ objectFit: 'contain' }} />
             <span className={styles.logoText}>POLYFIX</span>
           </Link>
           <p>{isAr
