@@ -100,13 +100,13 @@ export default function CareersPage() {
         <h2>Why work with us.</h2>
         <div className={styles.whyGrid}>
           {[
-            { num: '01', title: 'Fast Growing', desc: 'Join a company that is expanding rapidly across the GCC and Middle East.' },
-            { num: '02', title: 'Competitive Pay', desc: 'We offer competitive salaries and performance-based incentives.' },
-            { num: '03', title: 'Growth Opportunities', desc: 'We invest in our people. Grow your career as we grow the business.' },
-            { num: '04', title: 'Strong Culture', desc: 'A tight-knit team with a collaborative, results-driven work environment.' },
+            { icon: '🚀', title: 'Fast Growing', desc: 'Join a company that is expanding rapidly across the GCC and Middle East.' },
+            { icon: '💰', title: 'Competitive Pay', desc: 'We offer competitive salaries and performance-based incentives.' },
+            { icon: '📈', title: 'Growth Opportunities', desc: 'We invest in our people. Grow your career as we grow the business.' },
+            { icon: '🤝', title: 'Strong Culture', desc: 'A tight-knit team with a collaborative, results-driven work environment.' },
           ].map(w => (
             <div key={w.title} className={styles.whyCard}>
-              <div className={styles.whyNum}>{w.num}</div>
+              <div className={styles.whyIcon}>{w.icon}</div>
               <div className={styles.whyTitle}>{w.title}</div>
               <div className={styles.whyDesc}>{w.desc}</div>
             </div>

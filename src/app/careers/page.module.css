@@ -10,11 +10,9 @@
 .whySection { padding: 80px 48px; background: var(--white); }
 .whySection h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 4vw, 58px); }
 .whyGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
-.whyCard { background: var(--surface); padding: 36px; transition: background 0.3s; position: relative; overflow: hidden; }
-.whyCard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
+.whyCard { background: var(--surface); padding: 36px; transition: background 0.3s; }
 .whyCard:hover { background: var(--surface2); }
-.whyCard:hover::before { transform: scaleX(1); }
-.whyNum { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: rgba(200,150,62,0.15); line-height: 1; margin-bottom: 16px; }
+.whyIcon { font-size: 32px; margin-bottom: 16px; }
 .whyTitle { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
 .whyDesc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
