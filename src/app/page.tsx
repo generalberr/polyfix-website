@@ -123,9 +123,9 @@ export default function Home() {
         <div className={styles.capGrid}>
           {[
             { num: '01', title: 'Industrial Machinery', desc: 'We design and manufacture heavy-duty commercial machines built for serious production environments — custom engineered to your exact specifications and built to perform at scale.', img: '/hero.jpg', href: '/machinery' },
-            { num: '02', title: 'Polyester Putty for Steel', desc: 'Our flagship product — a professional-grade polyester putty trusted by bodyshops, fabricators, and builders across the Middle East. Made in Saudi Arabia.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70', href: '/putty' },
-            { num: '03', title: 'Industrial Resin', desc: 'Polyester, epoxy, vinyl ester, and gel coat — supplied by the kilogram, drum, or ton. Wholesale and retail for factories, workshops, and builders across the region.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70', href: '/resin' },
-            { num: '04', title: 'Gasket Sealant', desc: 'Four professional-grade sealant types under the PolyFix brand — RTV silicone, anaerobic, form-in-place, and thread sealant. Available retail and wholesale.', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=70', href: '/gasket' },
+            { num: '02', title: 'Polyester Putty for Steel', desc: 'Our flagship product — a professional-grade polyester putty trusted by bodyshops, fabricators, and builders across the Middle East. Made in Saudi Arabia.', img: '/putty-hero.png', href: '/putty' },
+            { num: '03', title: 'Industrial Resin', desc: 'Polyester, epoxy, vinyl ester, and gel coat — supplied by the kilogram, drum, or ton. Wholesale and retail for factories, workshops, and builders across the region.', img: '/resin-hero.png', href: '/resin' },
+            { num: '04', title: 'Gasket Sealant', desc: 'Four professional-grade sealant types under the PolyFix brand — RTV silicone, anaerobic, form-in-place, and thread sealant. Available retail and wholesale.', img: '/gasket-hero.png', href: '/gasket' },
           ].map(c => {
             const cardContent = (
               <>
