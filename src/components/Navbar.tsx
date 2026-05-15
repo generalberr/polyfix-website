@@ -8,7 +8,7 @@ import styles from './Navbar.module.css'
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/#services', label: 'Services' },
+  { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -34,9 +34,7 @@ export default function Navbar() {
 
         <ul className={styles.links}>
           {links.map(({ href, label }) => {
-            const active = href === '/#services'
-              ? pathname === '/'
-              : pathname === href
+            const active = pathname === href
             return (
               <li key={href}>
                 <Link href={href} className={`${styles.link} ${active ? styles.active : ''}`}>
