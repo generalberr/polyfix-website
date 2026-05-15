@@ -11,7 +11,7 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
       <div className={styles.top}>
         <div className={styles.brand}>
           <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
-            <Image src="/logo.png" alt="PolyFix Logo" width={140} height={70} style={{ objectFit: 'contain', marginLeft: '-15px', marginRight: '-8px' }} />
+            <Image src="/logo.png" alt="PolyFix Logo" width={280} height={140} style={{ objectFit: 'contain', marginLeft: '-30px', marginRight: '-15px' }} />
             <span className={styles.logoText}>POLYFIX</span>
           </Link>
           <p>{isAr
