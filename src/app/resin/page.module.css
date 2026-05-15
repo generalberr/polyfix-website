@@ -5,7 +5,7 @@
 
 /* HERO */
 .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 48px 80px; position: relative; overflow: hidden; }
-.heroBg { position: absolute; inset: 0; background: url('/hero.jpg') center/cover no-repeat; filter: brightness(0.2) saturate(0.5); z-index: 0; }
+.heroBg { position: absolute; inset: 0; background: url('/resin-hero.png') center/cover no-repeat; filter: brightness(0.35) saturate(0.6); z-index: 0; }
 .heroGradient { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0.1) 100%); z-index: 1; }
 .heroTag { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; }
 .heroTag::before { content: ''; display: block; width: 32px; height: 1px; background: var(--accent); }
