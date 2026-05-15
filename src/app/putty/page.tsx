@@ -100,13 +100,7 @@ export default function PuttyPage() {
           <div className={styles.heroRight}>
             {/* PRODUCT PHOTO PLACEHOLDER — replace /product.jpg with your real photo */}
             <div className={styles.productImgWrap}>
-              <div className={styles.productImgPlaceholder}>
-                <div className={styles.placeholderIcon}>📦</div>
-                <div className={styles.placeholderText}>Product Photo</div>
-                <div className={styles.placeholderSub}>Upload your tin photo to<br /><code>public/product.jpg</code><br />and replace the placeholder</div>
-              </div>
-              {/* Once you have the photo, replace the div above with: */}
-              {/* <img src="/product.jpg" alt="PolyFix Polyester Putty" className={styles.productImg} /> */}
+              <img src="/putty-hero.png" alt="PolyFix Polyester Putty" className={styles.productImg} />
             </div>
           </div>
         </div>
