@@ -31,7 +31,7 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
-          <Image src="/logo.png" alt="PolyFix Logo" width={120} height={60} style={{ objectFit: 'contain' }} />
+          <Image src="/logo.png" alt="PolyFix Logo" width={180} height={90} style={{ objectFit: 'contain', marginLeft: '-20px', marginRight: '-10px' }} />
           <span className={styles.logoText}>POLYFIX</span>
         </Link>
 
