@@ -8,7 +8,7 @@ import styles from './Navbar.module.css'
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/product', label: 'Product' },
+  { href: '/#services', label: 'Services' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -84,7 +84,7 @@ export default function Navbar({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
 
 const arLabels: Record<string, string> = {
   Home: 'الرئيسية',
-  Product: 'المنتج',
+  Services: 'خدماتنا',
   About: 'من نحن',
   Contact: 'اتصل بنا',
 }
