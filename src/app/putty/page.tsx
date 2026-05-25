@@ -14,18 +14,18 @@ const sizes = [
 ]
 
 const features = [
-  { icon: '⚡', title: 'Extreme Adhesion', desc: 'Bonds powerfully to steel with no primer required for standard applications. Once it sets, it stays.' },
-  { icon: '🎯', title: 'Easy Application', desc: 'Smooth, spreadable consistency that goes on clean. High coverage ratio means each kilogram goes further.' },
-  { icon: '✦', title: 'Perfect Sanding', desc: 'Sands cleanly without clogging the paper. Delivers a flawless surface ready for primer and topcoat.' },
-  { icon: '◎', title: 'Neutral Base', desc: 'No pigmentation means zero bleed-through. Accepts any topcoat color with perfect results every time.' },
-  { icon: '🔥', title: 'Oven Compatible', desc: 'Can be used inside or outside the oven — giving you full flexibility in professional bodyshop environments.' },
-  { icon: '🛡️', title: 'Lead & Asbestos Free', desc: 'Fully compliant and safe for professional use. Lead and asbestos exempt for your peace of mind.' },
-  { icon: '⏱', title: 'Fast & Controlled Cure', desc: 'Hardening speed is controlled by the amount of hardener used — giving you the working time you need.' },
-  { icon: '🏭', title: 'Made in Saudi Arabia', desc: 'Manufactured in our facility in Riyadh, KSA. Formulated specifically for the climate and demands of the region.' },
+  { num: '01', title: 'Extreme Adhesion', desc: 'Bonds powerfully to steel with no primer required for standard applications. Once it sets, it stays.' },
+  { num: '02', title: 'Easy Application', desc: 'Smooth, spreadable consistency that goes on clean. High coverage ratio means each kilogram goes further.' },
+  { num: '03', title: 'Perfect Sanding', desc: 'Sands cleanly without clogging the paper. Delivers a flawless surface ready for primer and topcoat.' },
+  { num: '04', title: 'Neutral Base', desc: 'No pigmentation means zero bleed-through. Accepts any topcoat color with perfect results every time.' },
+  { num: '05', title: 'Oven Compatible', desc: 'Can be used inside or outside the oven — giving you full flexibility in professional bodyshop environments.' },
+  { num: '06', title: 'Lead & Asbestos Free', desc: 'Fully compliant and safe for professional use. Lead and asbestos exempt for your peace of mind.' },
+  { num: '07', title: 'Fast & Controlled Cure', desc: 'Hardening speed is controlled by the amount of hardener used — giving you the working time you need.' },
+  { num: '08', title: 'Made in Saudi Arabia', desc: 'Manufactured in our facility in Riyadh, KSA. Formulated specifically for the climate and demands of the region.' },
 ]
 
 const specs = [
-  ['Product Type', 'Polyester Putty for Steel'],
+  ['Product Type', 'General Purpose Polyester Putty'],
   ['Base', 'Polyester Resin'],
   ['Hardener', 'MEKP (included in every tin)'],
   ['Substrate', 'Steel / Metal surfaces'],
@@ -85,7 +85,7 @@ export default function PuttyPage() {
         <div className={styles.heroContent}>
           <div className={styles.heroLeft}>
             <div className={styles.heroTag}>02 — Product</div>
-            <h1>Polyester Putty<br /><span>for Steel.</span></h1>
+            <h1>General Purpose<br /><span>Polyester Putty.</span></h1>
             <p>The professional-grade metal putty trusted by bodyshops, fabricators, and builders across the Middle East. Engineered in Saudi Arabia. Built to outperform.</p>
             <div className={styles.heroCtas}>
               <a href="#quote" className={styles.btnPrimary}>Request a Wholesale Quote</a>
@@ -124,7 +124,7 @@ export default function PuttyPage() {
         <div className={styles.featGrid}>
           {features.map(f => (
             <div key={f.title} className={styles.featCard}>
-              <div className={styles.featIcon}>{f.icon}</div>
+              <div className={styles.featNum}>{f.num}</div>
               <div className={styles.featTitle}>{f.title}</div>
               <div className={styles.featDesc}>{f.desc}</div>
             </div>
