@@ -107,7 +107,7 @@
 /* STATS */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -219,7 +219,7 @@
 }
 .featCard { background: var(--surface); padding: 36px; transition: background 0.3s; }
 .featCard:hover { background: var(--surface2); }
-.featIcon { font-size: 24px; margin-bottom: 16px; }
+.featNum { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 16px; }
 .featTitle { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
 .featDesc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 

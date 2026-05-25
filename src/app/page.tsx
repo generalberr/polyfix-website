@@ -77,8 +77,6 @@ export default function Home() {
       <div className={styles.stats} ref={statsRef}>
         {[
           { num: s1, suffix: '+', label: 'Years of Manufacturing' },
-          { num: s2, suffix: '', label: 'Production Lines' },
-          { num: s3, suffix: '', label: 'Industries Served' },
           { num: s4, suffix: '%', label: 'Professional Grade' },
         ].map(({ num, suffix, label }) => (
           <div key={label} className={styles.statItem}>
