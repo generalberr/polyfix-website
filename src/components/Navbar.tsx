@@ -29,7 +29,7 @@ export default function Navbar() {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="PolyFix Logo" width={180} height={90} style={{ objectFit: 'contain', marginLeft: '-20px', marginRight: '-10px' }} />
+          <Image src="/logo.png" alt="PolyFix Logo" width={135} height={67} style={{ objectFit: 'contain', marginLeft: '-15px', marginRight: '-8px' }} />
           <span className={styles.logoText}>POLYFIX</span>
         </Link>
 
