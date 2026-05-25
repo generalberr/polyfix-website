@@ -33,22 +33,28 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
         <div className={styles.col}>
           <div className={styles.heading}>{isAr ? 'التواصل' : 'Contact'}</div>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>{isAr ? 'البريد الإلكتروني' : 'Email'}</span>
+            <span className={styles.contactLabel}>General Inquiries</span>
             <a href="mailto:Info@polyfixglobal.com">Info@polyfixglobal.com</a>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>{isAr ? 'الهاتف' : 'Phone'}</span>
-            <a href="tel:+966534944752">+966 53 494 4752</a>
+            <span className={styles.contactLabel}>Sales</span>
+            <a href="mailto:sales@polyfixglobal.com">sales@polyfixglobal.com</a>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>WhatsApp</span>
+            <span className={styles.contactLabel}>Careers</span>
+            <a href="mailto:careers@polyfixglobal.com">careers@polyfixglobal.com</a>
+          </div>
+          <div className={styles.contactItem}>
+            <span className={styles.contactLabel}>Phone / WhatsApp</span>
             <a href="https://wa.me/966534944752" target="_blank" rel="noopener noreferrer">+966 53 494 4752</a>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>{isAr ? 'العنوان' : 'Address'}</span>
-            <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" target="_blank" rel="noopener noreferrer">
-              {isAr ? 'احصل على الاتجاهات ←' : 'Get Directions →'}
-            </a>
+            <span className={styles.contactLabel}>KSA Branch</span>
+            <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" target="_blank" rel="noopener noreferrer">Get Directions →</a>
+          </div>
+          <div className={styles.contactItem}>
+            <span className={styles.contactLabel}>Lebanon Branch</span>
+            <span>Mount Lebanon, Lebanon</span>
           </div>
         </div>
       </div>
