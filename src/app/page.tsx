@@ -123,7 +123,7 @@ export default function Home() {
         <div className={styles.capGrid}>
           {[
             { num: '01', title: 'Industrial Machinery', desc: 'We design and manufacture heavy-duty commercial machines built for serious production environments — custom engineered to your exact specifications and built to perform at scale.', img: '/hero.jpg', href: '/machinery' },
-            { num: '02', title: 'General Purpose Polyester Putty', desc: 'Our flagship product — a professional-grade polyester putty for steel, metal, wood, and construction surfaces. Trusted by bodyshops, fabricators, and builders across the Middle East. Made in Saudi Arabia.', img: '/putty-hero.png', href: '/putty' },
+            { num: '02', title: 'General Purpose Polyester Putty', desc: 'Our flagship product — a professional-grade polyester putty for steel, metal, wood, and construction surfaces. Trusted by bodyshops, fabricators, and builders across the Middle East.', img: '/putty-hero.png', href: '/putty' },
             { num: '03', title: 'Industrial Resin', desc: 'Polyester, epoxy, vinyl ester, and gel coat — supplied by the kilogram, drum, or ton. Wholesale and retail for factories, workshops, and builders across the region.', img: '/resin-hero.png', href: '/resin' },
             { num: '04', title: 'Gasket Sealant', desc: 'Four professional-grade sealant types under the PolyFix brand — RTV silicone, anaerobic, form-in-place, and thread sealant. Available retail and wholesale.', img: '/gasket-hero.png', href: '/gasket' },
           ].map(c => {
