@@ -43,8 +43,6 @@ export default function Home() {
   }, [])
 
   const s1 = useCountUp(15, statsVisible)
-  const s2 = useCountUp(8, statsVisible)
-  const s3 = useCountUp(6, statsVisible)
   const s4 = useCountUp(100, statsVisible)
 
   const about1 = useFadeUp()
