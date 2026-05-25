@@ -56,18 +56,24 @@ export default function ContactPage() {
                 { label: 'General Inquiries', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
                 { label: 'Sales', value: 'sales@polyfixglobal.com', href: 'mailto:sales@polyfixglobal.com' },
                 { label: 'Careers', value: 'careers@polyfixglobal.com', href: 'mailto:careers@polyfixglobal.com' },
-                { label: 'Phone / WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
-                { label: 'KSA Branch', value: 'Building 4559, Al Rafiah St.\nAl Misfat District\nRiyadh 14528, KSA', href: undefined },
-                { label: 'Lebanon Branch', value: 'Mount Lebanon, Lebanon', href: undefined },
               ].map(d => (
                 <div key={d.label} className={styles.detail}>
                   <span className={styles.detailLabel}>{d.label}</span>
-                  {d.href
-                    ? <a href={d.href} className={styles.detailValue} target={d.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">{d.value}</a>
-                    : <span className={styles.detailValue} style={{ whiteSpace: 'pre-line' }}>{d.value}</span>
-                  }
+                  <a href={d.href} className={styles.detailValue}>{d.value}</a>
                 </div>
               ))}
+              <div className={styles.branchBlock}>
+                <div className={styles.branchTitle}>Kingdom of Saudi Arabia (KSA)</div>
+                <div className={styles.branchItem}>Building 4559, Al Rafiah St., Al Misfat District, Riyadh 14528</div>
+                <div className={styles.branchItem}><a href="tel:+966534944752">+966 53 494 4752</a></div>
+                <div className={styles.branchItem}><a href="https://wa.me/966534944752" target="_blank" rel="noopener noreferrer">WhatsApp: +966 53 494 4752</a></div>
+              </div>
+              <div className={styles.branchBlock}>
+                <div className={styles.branchTitle}>Lebanon Branch</div>
+                <div className={styles.branchItem}>Mount Lebanon, Lebanon</div>
+                <div className={styles.branchItem}><a href="tel:+96181637675">+961 81 637 675</a></div>
+                <div className={styles.branchItem}><a href="https://wa.me/96181637675" target="_blank" rel="noopener noreferrer">WhatsApp: +961 81 637 675</a></div>
+              </div>
             </div>
           </div>
           <div className={styles.hours}>
@@ -161,26 +167,46 @@ export default function ContactPage() {
             />
           </div>
           <div className={styles.locationDetails}>
-            {[
-              { icon: '📍', label: 'KSA Branch', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
-              { icon: '📍', label: 'Lebanon Branch', value: 'Mount Lebanon, Lebanon' },
-              { icon: '📞', label: 'Phone / WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
-              { icon: '✉️', label: 'General Inquiries', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
-              { icon: '✉️', label: 'Sales', value: 'sales@polyfixglobal.com', href: 'mailto:sales@polyfixglobal.com' },
-              { icon: '✉️', label: 'Careers', value: 'careers@polyfixglobal.com', href: 'mailto:careers@polyfixglobal.com' },
-              { icon: '🗺️', label: 'KSA Directions', value: 'Open in Google Maps →', href: 'https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6' },
-            ].map(l => (
-              <div key={l.label} className={styles.locationItem}>
-                <div className={styles.locationIcon}>{l.icon}</div>
-                <div>
-                  <div className={styles.locationLabel}>{l.label}</div>
-                  {l.href
-                    ? <a href={l.href} className={styles.locationValue} target={l.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" style={{ whiteSpace: 'pre-line' }}>{l.value}</a>
-                    : <div className={styles.locationValue} style={{ whiteSpace: 'pre-line' }}>{l.value}</div>
-                  }
-                </div>
+            <div className={styles.locationItem}>
+              <div className={styles.locationIcon}>📍</div>
+              <div>
+                <div className={styles.locationLabel}>Kingdom of Saudi Arabia (KSA)</div>
+                <div className={styles.locationValue}>Building 4559, Al Rafiah Street<br />Al Misfat District, Riyadh 14528</div>
+                <a href="tel:+966534944752" className={styles.locationValue}>+966 53 494 4752</a><br />
+                <a href="https://wa.me/966534944752" className={styles.locationValue} target="_blank" rel="noopener noreferrer">WhatsApp: +966 53 494 4752</a><br />
+                <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" className={styles.locationValue} target="_blank" rel="noopener noreferrer">Get Directions →</a>
               </div>
-            ))}
+            </div>
+            <div className={styles.locationItem}>
+              <div className={styles.locationIcon}>📍</div>
+              <div>
+                <div className={styles.locationLabel}>Lebanon Branch</div>
+                <div className={styles.locationValue}>Mount Lebanon, Lebanon</div>
+                <a href="tel:+96181637675" className={styles.locationValue}>+961 81 637 675</a><br />
+                <a href="https://wa.me/96181637675" className={styles.locationValue} target="_blank" rel="noopener noreferrer">WhatsApp: +961 81 637 675</a>
+              </div>
+            </div>
+            <div className={styles.locationItem}>
+              <div className={styles.locationIcon}>✉️</div>
+              <div>
+                <div className={styles.locationLabel}>General Inquiries</div>
+                <a href="mailto:Info@polyfixglobal.com" className={styles.locationValue}>Info@polyfixglobal.com</a>
+              </div>
+            </div>
+            <div className={styles.locationItem}>
+              <div className={styles.locationIcon}>✉️</div>
+              <div>
+                <div className={styles.locationLabel}>Sales</div>
+                <a href="mailto:sales@polyfixglobal.com" className={styles.locationValue}>sales@polyfixglobal.com</a>
+              </div>
+            </div>
+            <div className={styles.locationItem}>
+              <div className={styles.locationIcon}>✉️</div>
+              <div>
+                <div className={styles.locationLabel}>Careers</div>
+                <a href="mailto:careers@polyfixglobal.com" className={styles.locationValue}>careers@polyfixglobal.com</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

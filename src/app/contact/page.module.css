@@ -25,6 +25,12 @@
 .sectionTagLight { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(200,150,62,0.6); margin-bottom: 16px; }
 
 .details { margin-top: 48px; display: flex; flex-direction: column; gap: 28px; }
+.branchBlock { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+.branchTitle { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; opacity: 0.8; }
+.branchItem { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+.branchItem a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.branchItem a:hover { color: #FFFFFF; }
+
 .detail { display: flex; flex-direction: column; gap: 4px; }
 .detailLabel { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(200,150,62,0.6); }
 .detailValue { font-size: 14px; color: rgba(255,255,255,0.75); transition: color 0.2s; }
