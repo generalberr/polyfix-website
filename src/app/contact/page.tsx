@@ -49,14 +49,14 @@ export default function ContactPage() {
         <div className={styles.infoPanel}>
           <div>
             <div className={styles.sectionTagLight}>Contact Info</div>
-            <h2>We&apos;re based<br />in Riyadh.</h2>
-            <p>Reach us directly or fill out the form and we&apos;ll get back to you promptly with pricing, technical data, or anything else you need.</p>
+            <h2>Two branches.<br />One team.</h2>
+            <p>Reach us directly or fill out the form and we&apos;ll get back to you promptly. We operate from Riyadh, Saudi Arabia and Mount Lebanon, Lebanon.</p>
             <div className={styles.details}>
               {[
                 { label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
                 { label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
                 { label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
-                { label: 'Address', value: 'Building 4559, Al Rafiah St.\nAl Misfat District\nRiyadh 14528, KSA', href: undefined },
+                { label: 'KSA Branch', value: 'Building 4559, Al Rafiah St.\nAl Misfat District\nRiyadh 14528, KSA', href: undefined },
               ].map(d => (
                 <div key={d.label} className={styles.detail}>
                   <span className={styles.detailLabel}>{d.label}</span>
@@ -160,7 +160,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.locationDetails}>
             {[
-              { icon: '📍', label: 'Address', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
+              { icon: '📍', label: 'KSA Branch', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
               { icon: '📞', label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
               { icon: '💬', label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
               { icon: '✉️', label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
