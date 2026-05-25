@@ -60,16 +60,16 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroGradient} />
-        <div className={styles.heroTag}>Industrial Machinery &amp; Polyester Putty</div>
+        <div className={styles.heroTag}>Industrial Machinery &amp; Chemical Products</div>
         <h1 className={styles.heroH1}>
           Industrial Engineering<br />Powered by <span>POLYFIX.</span>
         </h1>
         <p className={styles.heroSub}>
-          A leading and experienced producer of industrial and technological machinery — and a trusted manufacturer of professional polyester putty for automotive, construction, wood, and high-temperature applications.
+          From custom-built industrial machinery to professional-grade polyester putty, resin, and gasket sealants — PolyFix is your single source for industrial manufacturing and chemical products across the Middle East.
         </p>
         <div className={styles.heroCtas}>
-          <Link href="/product" className={styles.btnPrimary}>View Product</Link>
-          <Link href="/contact" className={styles.btnOutline}>Request Wholesale</Link>
+          <Link href="/services" className={styles.btnPrimary}>Explore Our Services</Link>
+          <Link href="/contact" className={styles.btnOutline}>Get a Quote</Link>
         </div>
       </section>
 
@@ -173,15 +173,15 @@ export default function Home() {
         </div>
         <div className={styles.featGrid}>
           {[
-            { icon: '⚡', title: 'Extreme Adhesion', desc: 'Bonds powerfully to steel. No primer required for standard applications.' },
-            { icon: '🎯', title: 'Easy Application', desc: 'Smooth spreadable consistency. High coverage ratio — each kg goes further.' },
-            { icon: '✦', title: 'Perfect Sanding', desc: 'Sands cleanly without clogging paper. Flawless surface for primer and topcoat.' },
-            { icon: '◎', title: 'Neutral Base', desc: 'No pigmentation — accepts any topcoat colour with zero bleed-through.' },
-            { icon: '🏭', title: 'Pro-Grade Formula', desc: 'Engineered for production bodyshops, metal fabricators, and construction pros.' },
-            { icon: '⏱', title: 'Fast Cure', desc: 'Controlled working time with fast hardening — keeps your workflow moving.' },
+            { num: '01', title: 'Extreme Adhesion', desc: 'Bonds powerfully to steel. No primer required for standard applications.' },
+            { num: '02', title: 'Easy Application', desc: 'Smooth spreadable consistency. High coverage ratio — each kg goes further.' },
+            { num: '03', title: 'Perfect Sanding', desc: 'Sands cleanly without clogging paper. Flawless surface for primer and topcoat.' },
+            { num: '04', title: 'Neutral Base', desc: 'No pigmentation — accepts any topcoat colour with zero bleed-through.' },
+            { num: '05', title: 'Pro-Grade Formula', desc: 'Engineered for production bodyshops, metal fabricators, and construction pros.' },
+            { num: '06', title: 'Fast Cure', desc: 'Controlled working time with fast hardening — keeps your workflow moving.' },
           ].map(f => (
             <div key={f.title} className={styles.featCard}>
-              <div className={styles.featIcon}>{f.icon}</div>
+              <div className={styles.featNum}>{f.num}</div>
               <div className={styles.featTitle}>{f.title}</div>
               <div className={styles.featDesc}>{f.desc}</div>
             </div>
