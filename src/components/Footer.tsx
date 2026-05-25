@@ -16,7 +16,7 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
           </Link>
           <p>{isAr
             ? 'مصنّع للآلات الصناعية ومعجون البوليستر الاحترافي. مبنى 4559، شارع الرفيعة، حي المسفلة، الرياض 14528، المملكة العربية السعودية.'
-            : 'Manufacturer of industrial machinery and professional polyester putty. Building 4559, Al Rafiah St., Al Misfat District, Riyadh 14528, KSA.'
+            : 'Manufacturer of industrial machinery and professional polyester putty. Two branches: Riyadh, Saudi Arabia & Mount Lebanon, Lebanon.'
           }</p>
         </div>
 
