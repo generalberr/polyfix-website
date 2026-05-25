@@ -77,8 +77,13 @@
 .contactItem {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-bottom: 16px;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.contactItem span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
 }
 
 .contactItem a {

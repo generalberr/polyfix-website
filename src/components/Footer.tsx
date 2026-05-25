@@ -21,17 +21,18 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
         </div>
 
         <div className={styles.col}>
-          <div className={styles.heading}>{isAr ? 'التنقل' : 'Navigation'}</div>
+          <div className={styles.heading}>Navigation</div>
           <ul className={styles.links}>
-            <li><Link href={`${prefix}/`}>{isAr ? 'الرئيسية' : 'Home'}</Link></li>
-            <li><Link href={`${prefix}/product`}>{isAr ? 'المنتج' : 'Product'}</Link></li>
-            <li><Link href={`${prefix}/about`}>{isAr ? 'من نحن' : 'About'}</Link></li>
-            <li><Link href={`${prefix}/contact`}>{isAr ? 'اتصل بنا' : 'Contact'}</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/careers">Careers</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className={styles.col}>
-          <div className={styles.heading}>{isAr ? 'التواصل' : 'Contact'}</div>
+          <div className={styles.heading}>Contact</div>
           <div className={styles.contactItem}>
             <span className={styles.contactLabel}>General Inquiries</span>
             <a href="mailto:Info@polyfixglobal.com">Info@polyfixglobal.com</a>
@@ -45,16 +46,17 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
             <a href="mailto:careers@polyfixglobal.com">careers@polyfixglobal.com</a>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>Phone / WhatsApp</span>
-            <a href="https://wa.me/966534944752" target="_blank" rel="noopener noreferrer">+966 53 494 4752</a>
-          </div>
-          <div className={styles.contactItem}>
             <span className={styles.contactLabel}>KSA Branch</span>
+            <span>Building 4559, Al Rafiah St., Riyadh 14528</span>
+            <a href="tel:+966534944752">+966 53 494 4752</a>
+            <a href="https://wa.me/966534944752" target="_blank" rel="noopener noreferrer">WhatsApp: +966 53 494 4752</a>
             <a href="https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6" target="_blank" rel="noopener noreferrer">Get Directions →</a>
           </div>
           <div className={styles.contactItem}>
             <span className={styles.contactLabel}>Lebanon Branch</span>
             <span>Mount Lebanon, Lebanon</span>
+            <a href="tel:+96181637675">+961 81 637 675</a>
+            <a href="https://wa.me/96181637675" target="_blank" rel="noopener noreferrer">WhatsApp: +961 81 637 675</a>
           </div>
         </div>
       </div>
