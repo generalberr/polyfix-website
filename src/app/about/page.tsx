@@ -12,14 +12,14 @@ export default function AboutPage() {
       <div className={styles.pageHero}>
         <div className={styles.sectionTag}>Who We Are</div>
         <h1>About<br /><span>PolyFix.</span></h1>
-        <p>A leading manufacturer of industrial machinery and professional polyester putty, headquartered in Riyadh, Saudi Arabia.</p>
+        <p>A leading manufacturer of industrial machinery and professional polyester putty, with branches in Riyadh, Saudi Arabia and Mount Lebanon, Lebanon.</p>
       </div>
 
       <section className={styles.story}>
         <div className={styles.sectionTag}>Our Story</div>
         <h2>Built on decades of manufacturing expertise.</h2>
         <div className={styles.storyGrid}>
-          <p>PolyFix was founded with a single mission: to produce industrial machinery and repair materials that professionals can rely on, every time. From our facility in Riyadh, we supply bodyshops, fabricators, construction companies, and distributors across the Middle East.</p>
+          <p>PolyFix was founded with a single mission: to produce industrial machinery and repair materials that professionals can rely on, every time. With branches in Riyadh, Saudi Arabia and Mount Lebanon, we supply bodyshops, fabricators, construction companies, and distributors across the Middle East.</p>
           <p>Our product line spans custom-engineered industrial machinery — mixing lines, packaging systems, and automated production equipment — alongside our flagship professional polyester putty, trusted by thousands of professionals across the GCC and beyond.</p>
         </div>
       </section>
