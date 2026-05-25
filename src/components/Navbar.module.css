@@ -159,4 +159,6 @@
   .btnPrimary { display: none; }
   .hamburger { display: flex; }
   .logoText { font-size: 20px; letter-spacing: 2px; }
+  .logo { gap: 0; }
+  .logo img { margin-left: -10px !important; margin-right: -5px !important; width: 100px !important; height: 50px !important; }
 }
