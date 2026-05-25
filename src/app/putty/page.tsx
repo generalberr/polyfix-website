@@ -40,7 +40,7 @@ const specs = [
 
 const steps = [
   { num: '01', title: 'Prepare the Surface', desc: 'Sand the repair area down to bare metal using 80-grit sandpaper. Remove all rust, grease, oil, and contaminants. Wipe clean with a dry cloth.' },
-  { num: '02', title: 'Mix with Hardener', desc: 'Add a small dose of the included MEKP hardener to the desired quantity of putty. Mix thoroughly until the color is completely uniform. More hardener = faster cure.' },
+  { num: '02', title: 'Mix with Hardener', desc: 'Add a small dose of the included hardener to the desired quantity of putty. Mix thoroughly until the color is completely uniform. More hardener = faster cure.' },
   { num: '03', title: 'Apply the Putty', desc: 'Spread the mixed putty onto the clean, dry surface using a flexible applicator. Work quickly and build up layers as needed for deeper repairs.' },
   { num: '04', title: 'Sand & Finish', desc: 'Once cured, sand smooth starting with 80-grit, then 180, then 320. The neutral base is fully ready for primer and any topcoat color.' },
 ]
@@ -103,7 +103,7 @@ export default function PuttyPage() {
       <section className={styles.sizesSection}>
         <div className={styles.sectionTag}>Available Sizes</div>
         <h2>Choose your format.</h2>
-        <p className={styles.sectionSub}>Every tin includes the MEKP hardener. Wholesale pricing available — contact us for volume rates.</p>
+        <p className={styles.sectionSub}>Every tin includes the hardener. Wholesale pricing available — contact us for volume rates.</p>
         <div className={styles.sizesGrid}>
           {sizes.map(s => (
             <div key={s.kg} className={styles.sizeCard}>
