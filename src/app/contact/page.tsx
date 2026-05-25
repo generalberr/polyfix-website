@@ -78,9 +78,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.hours}>
             <div className={styles.hoursTitle}>Working Hours</div>
-            <div className={styles.hoursRow}><span>Sunday – Thursday</span><span>8:00 AM – 5:00 PM</span></div>
-            <div className={styles.hoursRow}><span>Friday</span><span>Closed</span></div>
-            <div className={styles.hoursRow}><span>Saturday</span><span>9:00 AM – 1:00 PM</span></div>
+            <div className={styles.hoursRow}><span>Sunday – Saturday</span><span>8:00 AM – 6:00 PM</span></div>
           </div>
         </div>
 
