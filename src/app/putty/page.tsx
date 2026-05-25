@@ -21,7 +21,7 @@ const features = [
   { num: '05', title: 'Oven Compatible', desc: 'Can be used inside or outside the oven — giving you full flexibility in professional bodyshop environments.' },
   { num: '06', title: 'Lead & Asbestos Free', desc: 'Fully compliant and safe for professional use. Lead and asbestos exempt for your peace of mind.' },
   { num: '07', title: 'Fast & Controlled Cure', desc: 'Hardening speed is controlled by the amount of hardener used — giving you the working time you need.' },
-  { num: '08', title: 'Made in Saudi Arabia', desc: 'Manufactured in our facility in Riyadh, KSA. Formulated specifically for the climate and demands of the region.' },
+  { num: '08', title: 'Two Branches', desc: 'Manufactured and distributed from our facilities in Saudi Arabia and Lebanon — serving the GCC and Middle East region.' },
 ]
 
 const specs = [
@@ -34,7 +34,7 @@ const specs = [
   ['Sizes Available', '1 kg / 2 kg / 3 kg / 4 kg'],
   ['Oven Use', 'Inside & outside the oven'],
   ['Lead & Asbestos', 'Exempt'],
-  ['Origin', 'Kingdom of Saudi Arabia'],
+  ['Origin', 'Saudi Arabia & Lebanon'],
   ['Shelf Life', '12 months (sealed, cool & dry)'],
   ['Working Temp', '+5°C to +35°C'],
 ]
@@ -86,13 +86,13 @@ export default function PuttyPage() {
           <div className={styles.heroLeft}>
             <div className={styles.heroTag}>02 — Product</div>
             <h1>General Purpose<br /><span>Polyester Putty.</span></h1>
-            <p>The professional-grade metal putty trusted by bodyshops, fabricators, and builders across the Middle East. Engineered in Saudi Arabia. Built to outperform.</p>
+            <p>The professional-grade polyester putty trusted by bodyshops, fabricators, and builders across the Middle East. Manufactured and distributed from our facilities in Saudi Arabia and Lebanon.</p>
             <div className={styles.heroCtas}>
               <a href="#quote" className={styles.btnPrimary}>Request a Wholesale Quote</a>
               <a href="#specs" className={styles.btnOutline}>View Specs</a>
             </div>
             <div className={styles.heroBadges}>
-              <span className={styles.badge}>Made in KSA</span>
+              <span className={styles.badge}>KSA & Lebanon</span>
               <span className={styles.badge}>Lead & Asbestos Free</span>
               <span className={styles.badge}>Oven Compatible</span>
             </div>
