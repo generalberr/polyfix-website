@@ -53,10 +53,12 @@ export default function ContactPage() {
             <p>Reach us directly or fill out the form and we&apos;ll get back to you promptly. We operate from Riyadh, Saudi Arabia and Mount Lebanon, Lebanon.</p>
             <div className={styles.details}>
               {[
-                { label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
-                { label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
-                { label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
+                { label: 'General Inquiries', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
+                { label: 'Sales', value: 'sales@polyfixglobal.com', href: 'mailto:sales@polyfixglobal.com' },
+                { label: 'Careers', value: 'careers@polyfixglobal.com', href: 'mailto:careers@polyfixglobal.com' },
+                { label: 'Phone / WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
                 { label: 'KSA Branch', value: 'Building 4559, Al Rafiah St.\nAl Misfat District\nRiyadh 14528, KSA', href: undefined },
+                { label: 'Lebanon Branch', value: 'Mount Lebanon, Lebanon', href: undefined },
               ].map(d => (
                 <div key={d.label} className={styles.detail}>
                   <span className={styles.detailLabel}>{d.label}</span>
@@ -161,10 +163,12 @@ export default function ContactPage() {
           <div className={styles.locationDetails}>
             {[
               { icon: '📍', label: 'KSA Branch', value: 'Building 4559, Al Rafiah Street\nAl Misfat District\nRiyadh 14528, Saudi Arabia' },
-              { icon: '📞', label: 'Phone', value: '+966 53 494 4752', href: 'tel:+966534944752' },
-              { icon: '💬', label: 'WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
-              { icon: '✉️', label: 'Email', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
-              { icon: '🗺️', label: 'Directions', value: 'Open in Google Maps →', href: 'https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6' },
+              { icon: '📍', label: 'Lebanon Branch', value: 'Mount Lebanon, Lebanon' },
+              { icon: '📞', label: 'Phone / WhatsApp', value: '+966 53 494 4752', href: 'https://wa.me/966534944752' },
+              { icon: '✉️', label: 'General Inquiries', value: 'Info@polyfixglobal.com', href: 'mailto:Info@polyfixglobal.com' },
+              { icon: '✉️', label: 'Sales', value: 'sales@polyfixglobal.com', href: 'mailto:sales@polyfixglobal.com' },
+              { icon: '✉️', label: 'Careers', value: 'careers@polyfixglobal.com', href: 'mailto:careers@polyfixglobal.com' },
+              { icon: '🗺️', label: 'KSA Directions', value: 'Open in Google Maps →', href: 'https://maps.app.goo.gl/f9gh1YD8fTQtaEFw6' },
             ].map(l => (
               <div key={l.label} className={styles.locationItem}>
                 <div className={styles.locationIcon}>{l.icon}</div>
