@@ -17,10 +17,10 @@ const services = [
   {
     num: '02',
     title: 'General Purpose Polyester Putty',
-    desc: 'Our flagship product — a professional-grade polyester putty suitable for steel, metal, wood, and construction surfaces. Trusted by bodyshops, fabricators, and builders across the Middle East. Made in Saudi Arabia.',
+    desc: 'Our flagship product — a professional-grade polyester putty suitable for steel, metal, wood, and construction surfaces. Trusted by bodyshops, fabricators, and builders across the Middle East.',
     img: '/putty-hero.png',
     href: '/putty',
-    features: ['Extreme adhesion', 'Easy application', 'Perfect sanding', 'Made in KSA'],
+    features: ['Extreme adhesion', 'Easy application', 'Perfect sanding', 'KSA & Lebanon'],
   },
   {
     num: '03',
