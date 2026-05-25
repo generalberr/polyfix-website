@@ -153,8 +153,10 @@
 .mobileCta { color: var(--accent) !important; }
 
 @media (max-width: 768px) {
-  .nav { padding: 0 24px; }
+  .nav { padding: 0 20px; height: 64px; }
   .links { display: none; }
   .langToggle { display: none; }
+  .btnPrimary { display: none; }
   .hamburger { display: flex; }
+  .logoText { font-size: 20px; letter-spacing: 2px; }
 }
