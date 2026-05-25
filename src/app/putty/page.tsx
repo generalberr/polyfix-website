@@ -27,15 +27,14 @@ const features = [
 const specs = [
   ['Product Type', 'General Purpose Polyester Putty'],
   ['Base', 'Polyester Resin'],
-  ['Hardener', 'MEKP (included in every tin)'],
-  ['Substrate', 'Steel / Metal surfaces'],
-  ['Color', 'Neutral / Unpigmented'],
+  ['Hardener', 'Dibenzoyl Peroxide Paste (included in every tin)'],
+  ['Color', 'Beige / Gray'],
   ['Finish', 'Sandable / Paintable'],
   ['Sizes Available', '1 kg / 2 kg / 3 kg / 4 kg'],
   ['Oven Use', 'Inside & outside the oven'],
   ['Lead & Asbestos', 'Exempt'],
   ['Origin', 'Saudi Arabia & Lebanon'],
-  ['Shelf Life', '12 months (sealed, cool & dry)'],
+  ['Shelf Life', 'Approximately 30–36 months (depending on storage conditions)'],
   ['Working Temp', '+5°C to +35°C'],
 ]
 
