@@ -17,15 +17,39 @@ const placeholders: Record<string, string> = {
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState('Wholesale')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', company: '', country: '', quantity: '', message: '' })
   const [errors, setErrors] = useState<Record<string, boolean>>({})
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const required = ['firstName', 'lastName', 'email', 'message']
     const newErrors: Record<string, boolean> = {}
     required.forEach(k => { if (!form[k as keyof typeof form].trim()) newErrors[k] = true })
     setErrors(newErrors)
-    if (Object.keys(newErrors).length === 0) setSubmitted(true)
+    if (Object.keys(newErrors).length > 0) return
+
+    setLoading(true)
+    try {
+      const res = await fetch('https://formspree.io/f/mojbngpd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: `${form.firstName} ${form.lastName}`,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          country: form.country,
+          inquiryType: activeTab,
+          quantity: form.quantity,
+          message: form.message,
+        }),
+      })
+      if (res.ok) setSubmitted(true)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setLoading(false)
+    }
   }
 
   function reset() {
@@ -137,7 +161,9 @@ export default function ContactPage() {
                   <textarea className={`${styles.input} ${styles.textarea} ${errors.message ? styles.inputError : ''}`} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder={placeholders[activeTab]} />
                 </div>
               </div>
-              <button onClick={handleSubmit} className={styles.submit}>Send Message →</button>
+              <button onClick={handleSubmit} className={styles.submit} disabled={loading}>
+                {loading ? 'Sending...' : 'Send Message →'}
+              </button>
               <p className={styles.formNote}>We respond within 24 hours on business days.</p>
             </>
           ) : (
