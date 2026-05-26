@@ -8,6 +8,7 @@ import styles from './page.module.css'
 export default function CareersPage() {
   const [activeJob, setActiveJob] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
     name: '', email: '', phone: '', position: '', message: '', cv: null as File | null
   })
@@ -74,13 +75,35 @@ export default function CareersPage() {
     }, 100)
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const required = ['name', 'email', 'phone']
     const newErrors: Record<string, boolean> = {}
     required.forEach(k => { if (!form[k as keyof typeof form]) newErrors[k] = true })
     if (!form.cv) newErrors.cv = true
     setErrors(newErrors)
-    if (Object.keys(newErrors).length === 0) setSubmitted(true)
+    if (Object.keys(newErrors).length > 0) return
+
+    setLoading(true)
+    try {
+      const data = new FormData()
+      data.append('name', form.name)
+      data.append('email', form.email)
+      data.append('phone', form.phone)
+      data.append('position', form.position)
+      data.append('experience', form.message)
+      if (form.cv) data.append('cv', form.cv)
+
+      const res = await fetch('https://formspree.io/f/xnjrbeor', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data,
+      })
+      if (res.ok) setSubmitted(true)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -225,7 +248,9 @@ export default function CareersPage() {
                       </div>
                     </div>
                   </div>
-                  <button onClick={handleSubmit} className={styles.submit}>Submit Application →</button>
+                  <button onClick={handleSubmit} className={styles.submit} disabled={loading}>
+                    {loading ? 'Submitting...' : 'Submit Application →'}
+                  </button>
                   <p className={styles.formNote}>We review all applications and respond within 5 business days.</p>
                 </>
               ) : (
