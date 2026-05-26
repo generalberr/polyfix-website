@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
-const links = [
+const enLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
@@ -14,10 +14,34 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
+const arLinks = [
+  { href: '/ar', label: 'الرئيسية' },
+  { href: '/ar/services', label: 'خدماتنا' },
+  { href: '/ar/about', label: 'من نحن' },
+  { href: '/ar/careers', label: 'وظائف' },
+  { href: '/ar/contact', label: 'اتصل بنا' },
+]
+
+// Maps EN path to AR path and vice versa
+const pathMap: Record<string, string> = {
+  '/': '/ar',
+  '/services': '/ar/services',
+  '/about': '/ar/about',
+  '/careers': '/ar/careers',
+  '/contact': '/ar/contact',
+  '/machinery': '/ar/machinery',
+  '/putty': '/ar/putty',
+  '/resin': '/ar/resin',
+  '/gasket': '/ar/gasket',
+}
+
 export default function Navbar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const isAr = pathname.startsWith('/ar')
+  const links = isAr ? arLinks : enLinks
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -25,10 +49,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Get the opposite language URL
+  function getLangToggleHref() {
+    if (isAr) {
+      // AR -> EN: remove /ar prefix
+      const enPath = pathname.replace(/^\/ar/, '') || '/'
+      return enPath
+    } else {
+      // EN -> AR: find mapped AR path
+      return pathMap[pathname] || '/ar'
+    }
+  }
+
   return (
     <>
-      <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-        <Link href="/" className={styles.logo}>
+      <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${isAr ? styles.rtl : ''}`}>
+        <Link href={isAr ? '/ar' : '/'} className={styles.logo}>
           <Image src="/logo.png" alt="PolyFix Logo" width={90} height={45} style={{ objectFit: 'contain', marginLeft: '-10px', marginRight: '-5px' }} />
           <span className={styles.logoText}>POLYFIX</span>
         </Link>
@@ -47,7 +83,12 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.right}>
-          <Link href="/contact" className={styles.btnPrimary}>Get a Quote</Link>
+          <Link href={getLangToggleHref()} className={styles.langToggle}>
+            {isAr ? 'EN' : 'AR'}
+          </Link>
+          <Link href={isAr ? '/ar/contact' : '/contact'} className={styles.btnPrimary}>
+            {isAr ? 'احصل على عرض سعر' : 'Get a Quote'}
+          </Link>
           <button
             className={styles.hamburger}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -60,14 +101,17 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''} ${isAr ? styles.rtl : ''}`}>
         {links.map(({ href, label }) => (
           <Link key={href} href={href} onClick={() => setMenuOpen(false)} className={styles.mobileLink}>
             {label}
           </Link>
         ))}
-        <Link href="/contact" onClick={() => setMenuOpen(false)} className={`${styles.mobileLink} ${styles.mobileCta}`}>
-          Get a Quote
+        <Link href={isAr ? '/ar/contact' : '/contact'} onClick={() => setMenuOpen(false)} className={`${styles.mobileLink} ${styles.mobileCta}`}>
+          {isAr ? 'احصل على عرض سعر' : 'Get a Quote'}
+        </Link>
+        <Link href={getLangToggleHref()} onClick={() => setMenuOpen(false)} className={styles.mobileLink}>
+          {isAr ? '🌐 English' : '🌐 العربية'}
         </Link>
       </div>
     </>

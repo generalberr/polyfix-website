@@ -160,3 +160,12 @@
   .hamburger { display: flex; }
   .logoText { font-size: 20px; letter-spacing: 2px; }
 }
+
+/* RTL */
+.rtl { direction: rtl; font-family: 'Tajawal', sans-serif; }
+.rtl .links { flex-direction: row-reverse; }
+.rtl .right { flex-direction: row-reverse; }
+.rtl .link { letter-spacing: 0; font-family: 'Tajawal', sans-serif; font-size: 15px; }
+.rtl .mobileMenu { text-align: right; }
+.rtl .mobileLink { letter-spacing: 0; font-family: 'Tajawal', sans-serif; }
+
