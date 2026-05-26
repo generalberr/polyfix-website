@@ -1,0 +1,37 @@
+.sectionTagLight { font-family: 'Tajawal', sans-serif; font-size: 11px; color: rgba(200,150,62,0.7); margin-bottom: 16px; text-align: right; }
+.contactSection { display: grid; grid-template-columns: 1fr 1.6fr; min-height: calc(100vh - 72px); direction: rtl; }
+.contactLeft { background: var(--black); padding: 120px 48px 80px; display: flex; flex-direction: column; }
+.contactLeft h2 { font-family: 'Tajawal', sans-serif; font-size: clamp(36px, 4vw, 60px); font-weight: 800; color: #fff; text-align: right; }
+.contactLeft p { font-family: 'Tajawal', sans-serif; color: rgba(255,255,255,0.45); font-size: 15px; line-height: 1.85; margin-top: 16px; text-align: right; }
+.branchBlock { margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); text-align: right; }
+.branchTitle { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,150,62,0.6); margin-bottom: 10px; }
+.branchItem { font-family: 'Tajawal', sans-serif; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
+.branchItem a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.branchItem a:hover { color: #fff; }
+.hours { margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); text-align: right; }
+.hoursTitle { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,150,62,0.6); margin-bottom: 12px; }
+.hoursRow { display: flex; justify-content: space-between; font-family: 'Tajawal', sans-serif; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.contactRight { background: var(--white); padding: 120px 56px 80px; }
+.tabs { display: flex; gap: 0; margin-bottom: 36px; flex-direction: row-reverse; }
+.tab { font-family: 'Tajawal', sans-serif; font-size: 13px; padding: 10px 20px; border: 1px solid var(--border); background: var(--surface); color: var(--muted); cursor: pointer; transition: all 0.2s; }
+.tab:not(:last-child) { border-right: none; }
+.tabActive { background: var(--accent); color: var(--black); border-color: var(--accent); font-weight: 700; }
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; direction: rtl; }
+.formGroup { display: flex; flex-direction: column; gap: 8px; text-align: right; }
+.full { grid-column: 1 / -1; }
+.label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: right; }
+.input { background: var(--surface); border: 1px solid var(--border); color: var(--black); font-family: 'Tajawal', sans-serif; font-size: 15px; padding: 12px 16px; outline: none; transition: border-color 0.2s; width: 100%; text-align: right; direction: rtl; border-radius: 0; -webkit-appearance: none; }
+.input:focus { border-color: var(--accent); }
+.inputError { border-color: #C0392B !important; }
+.textarea { resize: vertical; min-height: 120px; }
+.submit { margin-top: 24px; width: 100%; background: var(--accent); color: var(--black); font-family: 'Tajawal', sans-serif; font-size: 15px; font-weight: 700; border: none; padding: 16px; cursor: pointer; transition: background 0.2s; }
+.submit:hover { background: var(--accent2); }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.formNote { font-family: 'Tajawal', sans-serif; font-size: 13px; color: var(--muted); margin-top: 16px; text-align: center; }
+.success { text-align: center; padding: 60px 24px; }
+.successIcon { font-size: 48px; margin-bottom: 16px; }
+.success h3 { font-family: 'Tajawal', sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 12px; }
+.success p { font-family: 'Tajawal', sans-serif; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.resetBtn { margin-top: 24px; background: none; border: 1px solid var(--border); padding: 10px 20px; cursor: pointer; font-family: 'Tajawal', sans-serif; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
+.resetBtn:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 768px) { .contactSection { grid-template-columns: 1fr; } .contactLeft { padding: 100px 24px 48px; } .contactRight { padding: 48px 24px; } .formGrid { grid-template-columns: 1fr; } }
