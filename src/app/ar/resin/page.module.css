@@ -1,0 +1,109 @@
+.sectionTag { font-family: "Tajawal", sans-serif; font-size: 11px; color: var(--accent); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; justify-content: flex-end; }
+.sectionTag::after { content: ""; display: block; width: 24px; height: 1px; background: var(--accent); }
+.sectionTagLight { font-family: "Tajawal", sans-serif; font-size: 11px; color: rgba(200,150,62,0.7); margin-bottom: 16px; text-align: right; }
+.hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 48px 80px; position: relative; overflow: hidden; direction: rtl; }
+.heroBg { position: absolute; inset: 0; background: url("/hero.jpg") center/cover no-repeat; filter: brightness(0.35) saturate(0.6); z-index: 0; }
+.heroGradient { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.4) 50%, transparent 100%); z-index: 1; }
+.heroTag { font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; flex-direction: row-reverse; justify-content: flex-end; }
+.heroTag::after { content: ""; display: block; width: 32px; height: 1px; background: var(--accent); }
+.heroH1 { font-family: "Tajawal", sans-serif; font-size: clamp(56px, 7vw, 110px); font-weight: 800; line-height: 1.1; color: #FFFFFF; position: relative; z-index: 2; max-width: 800px; text-align: right; }
+.heroH1 span { color: var(--accent); }
+.heroSub { margin-top: 24px; max-width: 520px; color: rgba(255,255,255,0.55); font-family: "Tajawal", sans-serif; font-size: 16px; line-height: 1.85; position: relative; z-index: 2; text-align: right; }
+.heroCtas { display: flex; gap: 16px; margin-top: 36px; position: relative; z-index: 2; flex-direction: row-reverse; }
+.btnPrimary { background: var(--accent); color: var(--black); font-family: "Tajawal", sans-serif; font-size: 14px; font-weight: 700; padding: 12px 24px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+.btnPrimary:hover { background: var(--accent2); transform: translateY(-1px); }
+.btnOutline { border: 1px solid rgba(255,255,255,0.3); color: #fff; font-family: "Tajawal", sans-serif; font-size: 14px; padding: 12px 24px; transition: all 0.2s; display: inline-block; }
+.btnOutline:hover { border-color: var(--accent); color: var(--accent); }
+.featSection, .examplesSection, .processSection, .typesSection, .specsSection, .sizesSection, .industriesSection, .featuresSection, .formatSection, .whySection { padding: 80px 48px; direction: rtl; text-align: right; }
+.featSection { background: var(--white); }
+.examplesSection { background: var(--surface); }
+.processSection { background: var(--white); }
+.typesSection { background: var(--white); }
+.specsSection { background: var(--surface); }
+.sizesSection { background: var(--white); }
+.industriesSection { background: var(--white); }
+.featuresSection { background: var(--surface); }
+.formatSection { background: var(--white); }
+.whySection { background: var(--surface); }
+.featSection h2, .examplesSection h2, .processSection h2, .typesSection h2, .specsSection h2, .sizesSection h2, .industriesSection h2, .featuresSection h2, .formatSection h2, .whySection h2 { font-family: "Tajawal", sans-serif; font-size: clamp(32px, 4vw, 58px); font-weight: 800; margin-top: 16px; }
+.featGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.featCard { background: var(--surface); padding: 36px; transition: background 0.3s; }
+.featCard:hover { background: var(--surface2); }
+.featNum { font-family: "Bebas Neue", sans-serif; font-size: 36px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 16px; }
+.featTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.featDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.examplesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.exampleCard { background: var(--white); overflow: hidden; }
+.exampleImg img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; filter: brightness(0.8); transition: transform 0.4s, filter 0.3s; }
+.exampleCard:hover .exampleImg img { transform: scale(1.04); filter: brightness(0.65); }
+.exampleBody { padding: 24px; }
+.exampleTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.exampleDesc { font-family: "Tajawal", sans-serif; font-size: 13px; color: var(--muted); line-height: 1.7; }
+.processGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.processItem { background: var(--surface); padding: 36px; }
+.processNum { font-family: "Bebas Neue", sans-serif; font-size: 40px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 16px; }
+.processTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.processDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.quoteSection { background: var(--black); padding: 80px 48px; direction: rtl; }
+.quoteInner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+.quoteLeft h2 { font-family: "Tajawal", sans-serif; font-size: clamp(32px, 4vw, 56px); font-weight: 800; color: #fff; text-align: right; }
+.quoteLeft p { font-family: "Tajawal", sans-serif; color: rgba(255,255,255,0.45); font-size: 15px; line-height: 1.85; margin-top: 16px; text-align: right; }
+.quoteContact { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+.quoteContactItem { display: flex; flex-direction: column; gap: 4px; text-align: right; }
+.quoteContactLabel { font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,150,62,0.5); }
+.quoteContactItem a { color: rgba(255,255,255,0.6); font-family: "Tajawal", sans-serif; font-size: 14px; transition: color 0.2s; }
+.quoteContactItem a:hover { color: #fff; }
+.quoteForm { background: var(--white); padding: 48px; text-align: right; }
+.formNote { font-family: "Tajawal", sans-serif; font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; }
+.formNote a { color: var(--accent); }
+.submit { display: block; background: var(--accent); color: var(--black); font-family: "Tajawal", sans-serif; font-size: 15px; font-weight: 700; padding: 16px 24px; text-align: center; transition: background 0.2s; }
+.submit:hover { background: var(--accent2); }
+.typeCard { background: var(--surface); padding: 36px; transition: background 0.3s; position: relative; overflow: hidden; }
+.typeCard::before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform 0.35s; }
+.typeCard:hover { background: var(--surface2); }
+.typeCard:hover::before { transform: scaleX(1); }
+.typeNum { font-family: "Bebas Neue", sans-serif; font-size: 36px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 12px; }
+.typeName { font-family: "Tajawal", sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.typeDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.typeUses { display: flex; flex-direction: column; gap: 6px; }
+.typeUse { display: flex; align-items: center; gap: 8px; font-family: "Tajawal", sans-serif; font-size: 13px; color: var(--muted); flex-direction: row-reverse; justify-content: flex-end; }
+.typeUseDot { width: 4px; height: 4px; background: var(--accent); flex-shrink: 0; }
+.specsTable { width: 100%; border-collapse: collapse; margin-top: 40px; }
+.specsTable tr { border-bottom: 1px solid var(--border); }
+.specsTable tr:last-child { border-bottom: none; }
+.specsTable td { padding: 16px 20px; font-family: "Tajawal", sans-serif; font-size: 14px; }
+.specsTable td:first-child { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); width: 200px; text-align: right; }
+.specsTable td:last-child { color: var(--black); font-weight: 500; text-align: right; }
+.specsTable tr:nth-child(odd) td { background: var(--white); }
+.specsTable tr:nth-child(even) td { background: var(--surface2); }
+.sizeGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.sizeCard { background: var(--surface); padding: 40px 32px; text-align: center; }
+.sizeWeight { font-family: "Bebas Neue", sans-serif; font-size: 52px; color: var(--black); line-height: 1; }
+.sizeUnit { font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 2px; color: var(--accent); display: block; margin-top: 4px; }
+.sizeDesc { font-family: "Tajawal", sans-serif; font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+.industriesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.industryCard { background: var(--white); padding: 36px; transition: background 0.3s; }
+.industryCard:hover { background: var(--surface2); }
+.industryNum { font-family: "Bebas Neue", sans-serif; font-size: 36px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 16px; }
+.industryTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.industryDesc { font-family: "Tajawal", sans-serif; font-size: 13px; color: var(--muted); line-height: 1.7; }
+.formatGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.formatCard { background: var(--surface); padding: 48px 36px; text-align: center; transition: background 0.3s; }
+.formatCard:hover { background: var(--surface2); }
+.formatNum { font-family: "Bebas Neue", sans-serif; font-size: 48px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 20px; }
+.formatLabel { font-family: "Tajawal", sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.formatDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.whyGrid { display: flex; flex-direction: column; gap: 0; margin-top: 48px; max-width: 760px; }
+.whyItem { display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--border); align-items: flex-start; flex-direction: row-reverse; }
+.whyItem:first-child { border-top: 1px solid var(--border); }
+.whyNum { font-family: "Bebas Neue", sans-serif; font-size: 40px; color: rgba(200,150,62,0.15); line-height: 1; min-width: 52px; }
+.whyTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.whyDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.badge { border: 1px solid rgba(200,150,62,0.35); color: rgba(200,150,62,0.8); font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; }
+.stepsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.stepCard { background: var(--white); padding: 36px; }
+.stepNum { font-family: "Bebas Neue", sans-serif; font-size: 40px; color: rgba(200,150,62,0.2); line-height: 1; margin-bottom: 16px; }
+.stepTitle { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.stepDesc { font-family: "Tajawal", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.8; }
+@media (max-width: 1024px) { .quoteInner { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 768px) { .hero { padding: 0 24px 60px; } .featSection, .examplesSection, .processSection, .typesSection, .specsSection, .sizesSection, .industriesSection, .featuresSection, .formatSection, .whySection { padding: 60px 24px; } .quoteSection { padding: 60px 24px; } .quoteForm { padding: 32px 24px; } .featGrid, .examplesGrid { grid-template-columns: 1fr; } .processGrid { grid-template-columns: 1fr 1fr; } .industriesGrid { grid-template-columns: 1fr 1fr; } .sizeGrid { grid-template-columns: repeat(2, 1fr); } .formatGrid { grid-template-columns: 1fr; } .stepsGrid { grid-template-columns: 1fr 1fr; } }
